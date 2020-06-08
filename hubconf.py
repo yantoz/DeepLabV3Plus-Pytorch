@@ -12,7 +12,7 @@ from network import deeplabv3plus_mobilenet as _deeplabv3plus_mobilenet
 def deeplabv3plus_resnet50(pretrained=False,**kwargs):
   model=_deeplabv3plus_resnet50(**kwargs)
   if pretrained:
-	checkpoint = 'https://download.pytorch.org/models/resnet18-5c106cde.pth'
+	checkpoint = 'https://github.com/joemarshall/DeepLabV3Plus-Pytorch/releases/download/pretrained_1.0/best_deeplabv3plus_resnet50_voc_os16.pth'
     model.load_state_dict(torch.hub.load_state_dict_from_url(checkpoint, progress=False))
   return model
   
